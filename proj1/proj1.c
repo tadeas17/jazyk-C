@@ -155,10 +155,10 @@ int main(int argc, char *argv[]) {
         if (argc > 2) { //Polud je předáno více vstupních parametrů program vypíše chybu
             printf("1");
             fprintf(stderr, "Nespravny pocet vstupnich parametru.\n");
-            return 0;
+            return 1;
         }
         if (is_find_number_valid(argv[1]) == 0) { //Zkontroluje jestli jsou vatupní data platná.
-            return 0;
+            return 1;
         }
     }
     char *find = (argc == 2 ? argv[1] : "\0");  //Pokud nebyl předán žádný parametr, tak vytvoří string o nulové délce
@@ -190,8 +190,8 @@ int main(int argc, char *argv[]) {
 
     if (exist == 0) { //Jestli nebyla nalezena žádná schoda.
         printf("Not found\n");
-        return 0;
+        return 1;
     }
 
-    return 1;
+    return 0;
 }
