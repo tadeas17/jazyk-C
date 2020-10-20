@@ -153,7 +153,6 @@ int main(int argc, char *argv[]) {
 
     if (argc > 1) {
         if (argc > 2) { //Polud je předáno více vstupních parametrů program vypíše chybu
-            printf("1");
             fprintf(stderr, "Nespravny pocet vstupnich parametru.\n");
             return 1;
         }
